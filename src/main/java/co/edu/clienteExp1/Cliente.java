@@ -58,9 +58,9 @@ public class Cliente
 	{
 		Cliente client = new Cliente();
 		client.start();
-		System.out.println(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
-		System.out.println(" - - - - - - - - Topicos - - - - - - - Mensajes  - - - - - - ");
-		System.out.println(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
+		System.out.println(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
+		System.out.println(" - - - - - - - - Topicos - - - - - - - - - - - - - - - - - - Mensajes  - - - - - - ");
+		System.out.println(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
 		while (true)
 		{
 
