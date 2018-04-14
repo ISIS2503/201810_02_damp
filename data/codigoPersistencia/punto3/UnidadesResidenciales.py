@@ -8,7 +8,7 @@ app = Flask(__name__)
 api = Api(app)
 
 clienteMongo = MongoClient('localhost', 27017)
-db = clienteMongo['connect_to_mongo']
+db = clienteMongo['apirestfulencincominutos']
 collection = db.UNIDADESRESIDENCIALES
 
 class TodoList(Resource):
