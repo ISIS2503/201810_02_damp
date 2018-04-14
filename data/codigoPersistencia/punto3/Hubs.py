@@ -31,7 +31,7 @@ class TodoList(Resource):
             idP = document['idP'].replace('\\','')
             informacion = document['Informacion'].replace('\\','')
             arreglo=[idP, informacion]
-            x['Cerradura#' + str(i)] = arreglo
+            x['HUB#' + str(i)] = arreglo
             i+=1
         thejson = json.dumps([{k :{ 'idP':v[0], 'Informacion':v[1]}} for k,v in x.items()])
         return thejson
