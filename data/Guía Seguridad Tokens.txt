@@ -4,10 +4,13 @@ https://auth0.com/adocs/quickstart/webapp/python/01-login
 Autorizacion en python con auth cero
 https://auth0.com/docs/quickstart/webapp/python/01-login
 
-Guía Obtener un token desde postman
+GuÃ­a Obtener un token desde postman
 https://profesores.virtual.uniandes.edu.co/~isis2503/dokuwiki/doku.php?id=laboratorios:gettoken_auth0
 
 Estuve intentando con Cerradura.py
+
+Sobre pruebas en postman
+https://jdsam.ovh/probando-api-postman/
 
 Credenciales de AuthCero de alejandro con los roles
 alesofttech
