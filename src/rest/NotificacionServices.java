@@ -19,9 +19,10 @@ import vos.Notificacion;
 import dao.Notificador;
 
 /**
- * Clase que expone servicios REST con ruta base: http://"ip o nombre de host":8080/VideoAndes/rest/videos/...
+ * Clase que expone servicios REST con ruta base: http://localhost:8080/NotificadorSpeed/rest/notificar
  */
 @Path("notificar")
+
 public class NotificacionServices
 {
 
@@ -56,15 +57,16 @@ public class NotificacionServices
      * @param video - video a agregar
      * @return Json con el video que agrego o Json con el error que se produjo
      */
-	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
+	@POST
 	public Response notificar(Notificacion a)
 	{
 		Notificador noti = new Notificador();
 		try {
-			noti.sendFromGMail(a.getDestinatario(), a.getAsunto(), a.getMensaje());
-		} catch (Exception e)
+			noti.sendFromGMail("miguelpuentes1999@gmail.com", "ALERTA SEGURIDAD YALE", a.getTipo() + " en Apartamento " + a.getApto() );
+		}
+		catch (Exception e)
 		{
 			return Response.status(500).entity(doErrorMessage(e)).build();
 		}

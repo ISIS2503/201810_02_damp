@@ -7,69 +7,74 @@ public class Notificacion
 	/**
 	 * codigo de la notificacion.
 	 */
-	@JsonProperty(value="codigo")
-	private String codigo;
-	/**
-	 * Descripcion Ingrediente.
-	 */
-	@JsonProperty(value="destinatario")
-	private String destinatario;
-	
-	/**
-	 * Traduccion al ingles de la descripcion.
-	 */
-	@JsonProperty(value="mensaje")
-	private String mensaje;
-	
-	@JsonProperty(value="asunto")
-	private String asunto;
+	private String Activo;
+	private String Tipo;
+	private String Conjunto;
+	private String Torre;
+	private String Piso;
+	private String Apartamento;
 
 	/**
 	 * 
-	 * @param nombre
-	 * @param descripcion
-	 * @param idescription
 	 */
-	public Notificacion(@JsonProperty(value="codigo")String codigo, @JsonProperty(value="destinatario")String destinatario,@JsonProperty(value="mensaje")String mensaje,@JsonProperty(value="asunto")String asunto)
+	public Notificacion(@JsonProperty(value="Activo")String Activo, @JsonProperty(value="Tipo")String Tipo,@JsonProperty(value="Conjunto")String Conjunto,@JsonProperty(value="Torre")String Torre,@JsonProperty(value="Piso")String Piso,@JsonProperty(value="Apartamento")String Apartamento)
 	
 	{
-		this.codigo = codigo;
-		this.destinatario = destinatario;
-		this.mensaje = mensaje;
-		this.asunto = asunto;
+		this.Activo = Activo;
+		this.Tipo = Tipo;
+		this.Conjunto = Conjunto;
+		this.Torre = Torre;
+		this.Piso = Piso;
+		this.Apartamento = Apartamento;
 	}
 
-	public String getCodigo() {
-		return codigo;
+	public String getActivo() {
+		return Activo;
 	}
 
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
+	public void setActivo(String Activo) {
+		this.Activo = Activo;
 	}
 
-	public String getDestinatario() {
-		return destinatario;
+	public String getTipo() {
+		return Tipo;
 	}
 
-	public void setDestinatario(String destinatario) {
-		this.destinatario = destinatario;
+	public void setTipo(String Tipo) {
+		this.Tipo = Tipo;
 	}
 
-	public String getMensaje() {
-		return mensaje;
+	public String getConjunto() {
+		return Conjunto;
 	}
 
-	public void setMensaje(String mensaje) {
-		this.mensaje = mensaje;
+	public void setConjunto(String Conjunto) {
+		this.Conjunto = Conjunto;
 	}
 
-	public String getAsunto() {
-		return asunto;
+	public String getTorre() {
+		return Torre;
 	}
 
-	public void setAsunto(String asunto) {
-		this.asunto = asunto;
+	public void setTorre(String Torre) {
+		this.Torre = Torre;
 	}
 
+	public String getPiso() {
+		return Piso;
+	}
+
+	public void setPiso(String Piso) {
+		this.Piso = Piso;
+	}
+
+	public String getApto() {
+		return Apartamento;
+	}
+
+	public void setApto(String Apartamento) {
+		this.Apartamento = Apartamento;
+	}
+	
+	
 }
-

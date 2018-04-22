@@ -12,7 +12,6 @@ import java.lang.Throwable;
 public class Suscribirse implements MqttCallback
 {
 	private Notificador noti;
-	private int contador = 0;
 	@Override
 	public void connectionLost(Throwable cause)
 	{
@@ -28,9 +27,9 @@ public class Suscribirse implements MqttCallback
 		System.out.println("TOPICO: "+  topic + " MENSAJE: " + message.toString());
 		try {
 			JSONObject json = new JSONObject(message.toString());
-			String destinatario = json.getString("destinatario");
-			String mensaje = json.getString("mensaje");
-			String asunto = json.getString("asunto");
+			String destinatario = "miguelpuentes1999@gmail.com";
+			String mensaje = json.getString("Tipo");
+			String asunto = "ALERTA DE SEGURIDAD | YALE";
 			noti.sendFromGMail(destinatario, asunto , mensaje);
 		}
 		catch (Exception e)
