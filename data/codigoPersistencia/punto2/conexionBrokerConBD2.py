@@ -14,7 +14,7 @@ collection = db.alertas
 
 
 # To consume latest messages and auto-commit offsets
-consumer = KafkaConsumer('Activo.A2.conjunto.1.1.1',
+consumer = KafkaConsumer('Activo.A02.conjunto.1.1.1',
                          group_id='my-group',
                          bootstrap_servers=['172.24.42.81:8090'])
 
