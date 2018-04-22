@@ -20,7 +20,7 @@ class server(Resource):
     from flask_cors import cross_origin
     from jose import jwt
 
-    AUTH0_DOMAIN = 'isis2503-ma.auth0.com'
+    AUTH0_DOMAIN = 'isis2503-dasolano1.auth0.com'
     API_AUDIENCE = YOUR_API_AUDIENCE
     ALGORITHMS = ["RS256"]
 
