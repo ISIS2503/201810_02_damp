@@ -1,8 +1,13 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, _request_ctx_stack
 from flask_restful import Resource, Api, reqparse
 from pymongo import MongoClient
 import datetime
 import json
+from six.moves.urllib.request import urlopen
+from functools import wraps
+from flask_cors import cross_origin
+from jose import jwt
+
 
 app = Flask(__name__)
 api = Api(app)
@@ -11,62 +16,54 @@ clienteMongo = MongoClient('localhost', 27017)
 db = clienteMongo['apirestfulencincominutos']
 collection = db.CERRADURAS
 
-class server(Resource):
-    import json
-    from six.moves.urllib.request import urlopen
-    from functools import wraps
+AUTH0_DOMAIN = 'isis2503-dasolano1.auth0.com'
+API_AUDIENCE = "uniandes.edu.co/entrega2"
+ALGORITHMS = ["RS256"]
 
-    from flask import Flask, request, jsonify, _request_ctx_stack
-    from flask_cors import cross_origin
-    from jose import jwt
+APP = Flask(__name__)
+    
 
-    AUTH0_DOMAIN = 'isis2503-dasolano1.auth0.com'
-    API_AUDIENCE = YOUR_API_AUDIENCE
-    ALGORITHMS = ["RS256"]
-
-    APP = Flask(__name__)
-
-    # Error handler
+# Error handler
     
 class AuthError(Exception):
     def __init__(self, error, status_code):
         self.error = error
         self.status_code = status_code
     
-    @APP.errorhandler(AuthError)
-    def handle_auth_error(ex):
+@APP.errorhandler(AuthError)
+def handle_auth_error(ex):
         response = jsonify(ex.error)
         response.status_code = ex.status_code
         return response
 
-class AuthFilter(Resource):
-    def get_token_auth_header():
+# Format error response and append status code
+def get_token_auth_header():
     """Obtains the Access Token from the Authorization Header
     """
-        auth = request.headers.get("Authorization", None)
-        if not auth:
-            raise AuthError({"code": "authorization_header_missing",
+    auth = request.headers.get("Authorization", None)
+    if not auth:
+        raise AuthError({"code": "authorization_header_missing",
                         "description":
                             "Authorization header is expected"}, 401)
     
-        parts = auth.split()
+    parts = auth.split()
     
-        if parts[0].lower() != "bearer":
-            raise AuthError({"code": "invalid_header",
+    if parts[0].lower() != "bearer":
+        raise AuthError({"code": "invalid_header",
                         "description":
                             "Authorization header must start with"
                             " Bearer"}, 401)
-        elif len(parts) == 1:
-            raise AuthError({"code": "invalid_header",
+    elif len(parts) == 1:
+        raise AuthError({"code": "invalid_header",
                         "description": "Token not found"}, 401)
-        elif len(parts) > 2:
-            raise AuthError({"code": "invalid_header",
+    elif len(parts) > 2:
+        raise AuthError({"code": "invalid_header",
                         "description":
                             "Authorization header must be"
                             " Bearer token"}, 401)
 
-        token = parts[1]
-        return token
+    token = parts[1]
+    return token
 
 def requires_auth(f):
     """Determines if the Access Token is valid
@@ -117,8 +114,6 @@ def requires_auth(f):
     return decorated
 
 
-
-
 class TodoList(Resource):
     def post(self):
         json_data = request.get_json(force = True)
@@ -145,7 +140,7 @@ class TodoList(Resource):
         return thejson
 class Todo(Resource):
 
-    //Aca se indica que este servicio requiere de autorización.
+    # Aca se indica que este servicio requiere de autorización.
     @app.route("/api/private")
     @cross_origin(headers=['Content-Type', 'Authorization'])
     @requires_auth
@@ -187,4 +182,3 @@ api.add_resource(TodoList, '/cerraduras')
 api.add_resource(Todo, '/cerraduras/<idP>')
 if __name__ == '__main__':
     app.run(debug=True, use_reloader= False)
-
