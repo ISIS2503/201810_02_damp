@@ -13,9 +13,13 @@ import java.util.TimerTask;
  */
 public class Suscribirse implements MqttCallback
 {
+	/**
+	 * Clase que se encarga de enviar la notificacion al propietario utilizando el servidor de gmail
+	 */
 	private Notificador noti;
-	private int secs;
 	
+	private Timer timer;
+	private TimerTask tarea;
 	
 	@Override
 	public void connectionLost(Throwable cause)
@@ -30,8 +34,7 @@ public class Suscribirse implements MqttCallback
 		 * Se inicializa el notificador que envía los mensajes al correo del destinatario	
 		 */
 		noti = new Notificador();
-		System.out.println(". : SE RECIBIÓ ALERTA : .   TOPICO: "+  topic + " MENSAJE: " + message.toString());
-
+		
 		String messageArrived = message.toString();
 
 		try
@@ -39,13 +42,15 @@ public class Suscribirse implements MqttCallback
 			if (messageArrived.contains(";;"))
 			{
 				String[] splittedMsg = messageArrived.split(";;");
-				System.out.println(" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !");
-				System.out.println(" !  "+ splittedMsg[0]+ " : Cerradura: " + splittedMsg[1] + "[Activa]"+"!");
-				System.out.println(" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !");
-				alertaCerraduraOffline("La cerradura " + splittedMsg[1] + " ha sido desconectada! ");
+				System.out.println("-------------------------------------------------------------------------------");
+				System.out.println("----" + splittedMsg[0]+ " : Cerradura: " + splittedMsg[1] + "[Activa]" + "----");
+				System.out.println("-------------------------------------------------------------------------------");
+				timer.cancel();
+				alertaCerraduraOffline(splittedMsg[1]);
 			}
 			else
 			{
+				System.out.println(" || SE RECIBIÓ ALERTA ||   |TOPICO: "+  topic + " |MENSAJE: " + message.toString());
 				JSONObject json = new JSONObject(messageArrived);
 				String destinatario = "miguelpuentes1999@gmail.com";
 				String mensaje = json.getString("Tipo");
@@ -61,15 +66,18 @@ public class Suscribirse implements MqttCallback
 		}
 	}
 
-	public void alertaCerraduraOffline(String msg) throws InterruptedException
+	public void alertaCerraduraOffline(String pMsg) throws InterruptedException
 	{
-		Timer timer = new Timer();
-		TimerTask tarea = new TimerTask()
+		timer = new Timer();
+		tarea = new TimerTask()
 		{
 			@Override
 			public void run()
 			{
-				noti.sendFromGMail("miguelpuentes1999@gmail.com", "Cerradura Desconectada | YALE", msg);
+				noti.sendFromGMail("miguelpuentes1999@gmail.com", "Cerradura Desconectada | YALE", "Cerradura desconectada");
+				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				System.out.println("!!!!!! ERROR " +" : Cerradura: " + pMsg + "[Inactiva]" + "!!!!");
+				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			}
 		};
 		timer.schedule(tarea, 31000);
