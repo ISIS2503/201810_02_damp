@@ -39,7 +39,7 @@ public class Cliente
 	}
 	
 	/**
-	 * Método en el que se hace la suscripcion a los topicos que define node-red.
+	 * Metodo en el que se hace la suscripcion a los topicos que define node-red.
 	 */
 	public void start()
 	{
@@ -49,9 +49,10 @@ public class Cliente
 			client.setCallback(suscribirse);
 			client.connect();
 			client.subscribe("Activo.A1.conjunto.1.1.1");
-			client.subscribe("Activo.A2.conjunto.1.1.1");
-			client.subscribe("Activo.A3.conjunto.1.1.1");
-			client.subscribe("Activo.A4.conjunto.1.1.1");
+			/**
+			 * Suscripcion para health check
+			 */
+			client.subscribe("Activo.A1.conjunto.1.1.1.health-check");
 		}
 		catch (MqttException e)
 		{

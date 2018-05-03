@@ -35,7 +35,6 @@ public class PublicadorClaves {
      * @throws Exception 
      */
 
-	//1.1.1.1.1.1.1.1.1.1.1.1.1.1.11.
 	public static void main(String[] args) throws Exception {
 
         String topic = "Activo.A1.conjunto.1.1.1.config";

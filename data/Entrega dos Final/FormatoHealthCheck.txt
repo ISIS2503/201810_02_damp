@@ -1,0 +1,7 @@
+Topico donde se debe publicar el health-check
+"Activo.A1.conjunto.1.1.1.health-check"
+
+Estructura y formato del health-check
+Health-Check;;Activo.A1.conjunto.1.1.1.health-check
+
+Publicar un health-check cada 10 segundos.
