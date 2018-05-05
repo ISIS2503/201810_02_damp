@@ -34,14 +34,15 @@ public class Suscribirse implements MqttCallback
 		 * Se inicializa el notificador que envía los mensajes al correo del destinatario	
 		 */
 		noti = new Notificador();
-		
 		String messageArrived = message.toString();
 
 		try
 		{
 			if (messageArrived.contains(";;"))
 			{
-				String[] splittedMsg = messageArrived.split(";;");
+				JSONObject HealthCheckJson = new JSONObject(messageArrived);
+				String value = HealthCheckJson.getString("Valor");
+				String[] splittedMsg = value.split(";;");
 				System.out.println("-------------------------------------------------------------------------------");
 				System.out.println("----" + splittedMsg[0]+ " : Cerradura: " + splittedMsg[1] + "[Activa]" + "----");
 				System.out.println("-------------------------------------------------------------------------------");
