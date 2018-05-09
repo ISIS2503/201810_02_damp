@@ -16,10 +16,15 @@ public class Suscribirse implements MqttCallback
 	/**
 	 * Clase que se encarga de enviar la notificacion al propietario utilizando el servidor de gmail
 	 */
-	private Notificador noti;
-	
+	private Notificador noti = new Notificador();
 	private Timer timer;
 	private TimerTask tarea;
+	
+	private boolean A1 = true;
+	private boolean A2 = true;
+	private boolean A3 = true;
+	private boolean A4 = true;
+	
 	
 	@Override
 	public void connectionLost(Throwable cause)
@@ -33,7 +38,7 @@ public class Suscribirse implements MqttCallback
 		/**
 		 * Se inicializa el notificador que envía los mensajes al correo del destinatario	
 		 */
-		noti = new Notificador();
+		//noti = new Notificador();
 		String messageArrived = message.toString();
 
 		try
@@ -56,10 +61,24 @@ public class Suscribirse implements MqttCallback
 				String destinatario = "miguelpuentes1999@gmail.com";
 				String mensaje = json.getString("Tipo");
 				String asunto = "ALERTA DE SEGURIDAD | YALE";
-				noti.sendFromGMail(destinatario, asunto , mensaje);
+				
+				if (mensaje.equals("A1") && A1 == true)
+				{
+					noti.sendFromGMail(destinatario, asunto , mensaje);
+				}
+				else if (mensaje.equals("A2") && A2 == true)
+				{
+					noti.sendFromGMail(destinatario, asunto , mensaje);
+				}
+				else if (mensaje.equals("A3") && A3 == true)
+				{
+					noti.sendFromGMail(destinatario, asunto , mensaje);
+				}
+				else if (mensaje.equals("A4") && A4 == true)
+				{
+					noti.sendFromGMail(destinatario, asunto , mensaje);
+				}
 			}
-
-
 		}
 		catch (Exception e)
 		{
@@ -77,12 +96,54 @@ public class Suscribirse implements MqttCallback
 			{
 				noti.sendFromGMail("miguelpuentes1999@gmail.com", "Cerradura Desconectada | YALE", "Cerradura "+ pMsg +" desconectada");
 				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-				System.out.println("!!!!!! ERROR " +" : Cerradura: " + pMsg + "[Inactiva]" + "!!!!");
+				System.out.println("!!!!!! ERROR " +" : Cerradura: " + pMsg + "[Inactiva]" + "!!!!!!!!!!!");
 				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			}
 		};
 		timer.schedule(tarea, 31000);
 	}
+	public void desactivarAlarma(String pId)
+	{
+		if ("A1".equals(pId))
+		{
+			A1 = false;
+		}
+		else if ("A2".equals(pId))
+		{
+			A2 = false;
+		}
+		else if ("A3".equals(pId))
+		{
+			A3 = false;
+		}
+		else if("A4".equals(pId))
+		{
+			A4 = false;
+		}
+		
+	}
+	public void reactivarAlarma(String pId)
+	{
+		if ("A1".equals(pId))
+		{
+			A1 = true;
+		}
+		else if ("A2".equals(pId))
+		{
+			A2 = true;
+		}
+		else if ("A3".equals(pId))
+		{
+			A3 = true;
+		}
+		else if("A4".equals(pId))
+		{
+			A4 = true;
+		}
+	}
+	
+	
+	
 	@Override
 	public void deliveryComplete(IMqttDeliveryToken token)
 	{
