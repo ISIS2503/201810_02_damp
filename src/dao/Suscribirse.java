@@ -100,7 +100,7 @@ public class Suscribirse implements MqttCallback
 				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			}
 		};
-		timer.schedule(tarea, 31000);
+		timer.schedule(tarea, 41000);
 	}
 	public void desactivarAlarma(String pId)
 	{
