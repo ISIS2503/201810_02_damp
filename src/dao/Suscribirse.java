@@ -39,6 +39,7 @@ public class Suscribirse implements MqttCallback
 		 * Se inicializa el notificador que envía los mensajes al correo del destinatario	
 		 */
 		//noti = new Notificador();
+		
 		String messageArrived = message.toString();
 
 		try
