@@ -9,14 +9,11 @@ alertas = db.alertas
 
 alertasPorBarrioMes = []
 
-def llenarListaJson(pMes,pConjunto):
+def llenarListaJson(pConjunto):
     cursor = alertas.find({})
     for document in cursor:
-        hourT = document['Hora']
-        mes = hourT.month
-        if(document['Conjunto'] == pConjunto and mes == pMes):
+        if(document['Conjunto'] == pConjunto ):
             alertasPorBarrioMes.append(document)
         
-llenarListaJson(3,'Mirandela')
-
+llenarListaJson('Mirandela')
 print(alertasPorBarrioMes)

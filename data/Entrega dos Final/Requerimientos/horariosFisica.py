@@ -107,7 +107,7 @@ broker_address= "172.24.41.200"  #Broker address
 port = 8083                         #Broker port
 #user = "yourUser"                    #Connection username
 #password = "yourPassword"            #Connection password
-topicSub = [("Activo.A1.conjunto.1.1.1",0)]
+topicSub = [("Activo.A1.conjunto.1.1.1.claves",0)]
 topicPub = ("Activo.A1.conjunto.1.1.1.config",0)
  
 client = mqtt.Client()               #create new instance
