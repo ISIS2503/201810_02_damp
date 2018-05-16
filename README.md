@@ -3,13 +3,12 @@
 
 ## Integrantes
 
-| Nombre  | Apellido |
-| ------------- | ------------- |
-| Ana Camila | Fandiño de la Hoz  |
-| Diego Alejandro | Solano Ariza  |
-| Miguel Ángel  | Puentes Ramírez  |
-| Paula Juliana  | Alvarado Zabala |
-| Diego  | Riveros  |
+| Nombre  | Apellido | Código |
+| ------------- | ------------- | ------------- |
+| Ana Camila | Fandiño de la Hoz  | 201326407 |
+| Diego Alejandro | Solano Ariza  | 201612033 |
+| Miguel Ángel  | Puentes Ramírez  | 201616771 |
+| Paula Juliana  | Alvarado Zabala | 201313033 |
 
 ¡Nosotros somos RAMPART! Software de seguridad y soluciones de Arquitectura ¡y este es nuestro Repo! En el cual subiremos y compartiremos nuestros proyectos y la implementación del software de Seguridad. En base a la propuesta de YALE, construiremos soluciones de arquitectura para mejorar los atributos de calidad y resolver los requerimientos con inteligencia y destreza.
 
