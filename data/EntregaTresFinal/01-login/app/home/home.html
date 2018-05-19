@@ -1,0 +1,165 @@
+
+<h4 ng-if="vm.auth.isAuthenticated()">
+
+	
+    
+    
+
+
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+<div class="grid-container">
+  <div class="item1"><img src="images/rampart.png"></div>
+  <div class="item2">
+  	<img src="images/user.png">
+  	<p>Nombre de usuario: xxxxxxx</p>
+  	<p>Rol: Seguridad</p>
+  </div>
+  <div class="item3">Unidades residenciales<br>
+
+  	<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+  </div> 
+
+  <div class="item4">Filtros: <br>
+  	<form action="/action_page.php" method="get" style="text-align: left;">
+  <label class="switch">
+  <input type="checkbox"> 
+  <span class="slider"></span> 
+</label> puerta abierta <br>
+  <label class="switch">
+  <input type="checkbox"> 
+  <span class="slider"></span> 
+</label> numero de intentos<br>
+  <label class="switch">
+  <input type="checkbox"> 
+  <span class="slider"></span> 
+</label> horario no permitido<br>
+  <label class="switch">
+  <input type="checkbox"> 
+  <span class="slider"></span> 
+</label> nivel de bateria<br>
+  <label class="switch">
+  <input type="checkbox"> 
+  <span class="slider"></span> 
+</label> cerradura desconectada<br>
+  <label class="switch">
+  <input type="checkbox"> 
+  <span class="slider"></span> 
+</label> hub desconectado<br>
+  <input type="submit" value="Filtrar">
+</form>
+  </div>
+  <div class="item5">Detalle de alarma:</div>
+</div>
+    You are logged in!
+ 
+</h4>
+<h4 ng-if="!vm.auth.isAuthenticated()">
+	<img src="images/homelog.png" class="img-responsive">
+
+  You are not logged in! Please <a ng-click="vm.auth.login()">Log In</a> to continue.
+</h4>

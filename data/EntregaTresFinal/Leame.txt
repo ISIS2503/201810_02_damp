@@ -1,0 +1,2 @@
+El login está separado de el modulo de administración.
+El modulo de administración es la clase Cliente del paquete dao, ejecutar como Java App.
