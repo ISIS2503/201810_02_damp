@@ -4,6 +4,8 @@ import org.jboss.dmr.JSONParser;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import frame.ModuloControl;
+
 import java.lang.Throwable;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -19,12 +21,18 @@ public class Suscribirse implements MqttCallback
 	private Notificador noti = new Notificador();
 	private Timer timer;
 	private TimerTask tarea;
+	private ModuloControl modulo;
 	
 	private boolean A1 = true;
 	private boolean A2 = true;
 	private boolean A3 = true;
 	private boolean A4 = true;
 	
+	public Suscribirse()
+	{
+		modulo = new ModuloControl();
+		modulo.setVisible(true);
+	}
 	
 	@Override
 	public void connectionLost(Throwable cause)
@@ -38,6 +46,7 @@ public class Suscribirse implements MqttCallback
 		/**
 		 * Se inicializa el notificador que envía los mensajes al correo del destinatario	
 		 */
+		
 		//noti = new Notificador();
 		
 		String messageArrived = message.toString();
@@ -66,18 +75,22 @@ public class Suscribirse implements MqttCallback
 				if (mensaje.equals("A1") && A1 == true)
 				{
 					noti.sendFromGMail(destinatario, asunto , mensaje);
+					modulo.pintarAlerta("A1: Puerta Abierta", "red");
 				}
 				else if (mensaje.equals("A2") && A2 == true)
 				{
 					noti.sendFromGMail(destinatario, asunto , mensaje);
+					modulo.pintarAlerta("A2: Movimiento Sospechoso", "blue");
 				}
 				else if (mensaje.equals("A3") && A3 == true)
 				{
 					noti.sendFromGMail(destinatario, asunto , mensaje);
+					modulo.pintarAlerta("A3: Clave Incorrecta", "orange");
 				}
 				else if (mensaje.equals("A4") && A4 == true)
 				{
 					noti.sendFromGMail(destinatario, asunto , mensaje);
+					modulo.pintarAlerta("A4: Bateria Baja", "yellow");
 				}
 			}
 		}
@@ -96,6 +109,7 @@ public class Suscribirse implements MqttCallback
 			public void run()
 			{
 				noti.sendFromGMail("miguelpuentes1999@gmail.com", "Cerradura Desconectada | YALE", "Cerradura "+ pMsg +" desconectada");
+				modulo.pintarAlerta("ERROR " +" : Cerradura: " + pMsg + "[Inactiva]" ,"gray");
 				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 				System.out.println("!!!!!! ERROR " +" : Cerradura: " + pMsg + "[Inactiva]" + "!!!!!!!!!!!");
 				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");

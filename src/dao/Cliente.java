@@ -6,6 +6,8 @@ import java.util.Scanner;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 
+import frame.ModuloControl;
+
 
 public class Cliente
 {
@@ -14,6 +16,7 @@ public class Cliente
 	 * Atributo que representa el cliente en Mqtt.
 	 */
 	private MqttClient client;
+	
 
 	private static Suscribirse suscribirse;
 
@@ -49,6 +52,8 @@ public class Cliente
 	{
 		try
 		{
+			
+			
 			suscribirse = new Suscribirse();
 			suscribirse.alertaCerraduraOffline("First");
 			client.setCallback(suscribirse);
@@ -81,6 +86,7 @@ public class Cliente
 		Cliente client = new Cliente();
 		client.start();
 		Scanner sc = new Scanner(System.in);
+		
 
 		for(;;)
 		{
