@@ -103,9 +103,9 @@ public class Mapa extends JPanel implements ActionListener
 		{
 			botonesCasillas[ 3 ][ 4 ].setBackground(Color.red);
 		}
-		else if(pColor.equals("orange"))
+		else if(pColor.equals("magenta"))
 		{
-			botonesCasillas[ 3 ][ 4 ].setBackground(Color.orange);
+			botonesCasillas[ 3 ][ 4 ].setBackground(Color.magenta);
 		}
 		else if(pColor.equals("blue"))
 		{

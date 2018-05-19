@@ -24,7 +24,7 @@ public class PanelAlertas extends JPanel
 		setBorder(new TitledBorder("Alertas en el conjunto"));
 
 		l1 = new DefaultListModel<>();  
-		l1.addElement("Example1");  
+//		l1.addElement("Example1");  
 		listaAlertas = new JList<>(l1);  
 		//      listaAlertas.setBounds(100,100, 75,75);  
 		add(listaAlertas);  

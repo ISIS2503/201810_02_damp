@@ -88,7 +88,7 @@ public class Suscribirse implements MqttCallback
 				else if (mensaje.equals("A3") && A3 == true)
 				{
 //					noti.sendFromGMail(destinatario, asunto , mensaje);
-					modulo.pintarAlerta("A3: Clave Incorrecta", "orange");
+					modulo.pintarAlerta("A3: Clave Incorrecta", "magenta");
 				}
 				else if (mensaje.equals("A4") && A4 == true)
 				{
