@@ -99,11 +99,11 @@ public class Mapa extends JPanel implements ActionListener
 
 	public void pintarColor(String pColor)
 	{
-		if (pColor.equals("Red"))
+		if (pColor.equals("red"))
 		{
 			botonesCasillas[ 3 ][ 4 ].setBackground(Color.red);
 		}
-		else if(pColor.equals("Orange"))
+		else if(pColor.equals("orange"))
 		{
 			botonesCasillas[ 3 ][ 4 ].setBackground(Color.orange);
 		}

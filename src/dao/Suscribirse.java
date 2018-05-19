@@ -69,27 +69,30 @@ public class Suscribirse implements MqttCallback
 				System.out.println(" || SE RECIBIÓ ALERTA ||   |TOPICO: "+  topic + " |MENSAJE: " + message.toString());
 				JSONObject json = new JSONObject(messageArrived);
 				String destinatario = "miguelpuentes1999@gmail.com";
-				String mensaje = json.getString("Tipo");
+				String mensajeCompleto = json.getString("Tipo");
+				String[] splittedMensaje = mensajeCompleto.split("");
+				String mensaje = splittedMensaje[0]+splittedMensaje[1];
+				
 				String asunto = "ALERTA DE SEGURIDAD | YALE";
 				
 				if (mensaje.equals("A1") && A1 == true)
 				{
-					noti.sendFromGMail(destinatario, asunto , mensaje);
+//					noti.sendFromGMail(destinatario, asunto , mensaje);
 					modulo.pintarAlerta("A1: Puerta Abierta", "red");
 				}
 				else if (mensaje.equals("A2") && A2 == true)
 				{
-					noti.sendFromGMail(destinatario, asunto , mensaje);
+//					noti.sendFromGMail(destinatario, asunto , mensaje);
 					modulo.pintarAlerta("A2: Movimiento Sospechoso", "blue");
 				}
 				else if (mensaje.equals("A3") && A3 == true)
 				{
-					noti.sendFromGMail(destinatario, asunto , mensaje);
+//					noti.sendFromGMail(destinatario, asunto , mensaje);
 					modulo.pintarAlerta("A3: Clave Incorrecta", "orange");
 				}
 				else if (mensaje.equals("A4") && A4 == true)
 				{
-					noti.sendFromGMail(destinatario, asunto , mensaje);
+//					noti.sendFromGMail(destinatario, asunto , mensaje);
 					modulo.pintarAlerta("A4: Bateria Baja", "yellow");
 				}
 			}
