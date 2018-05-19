@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "441214f4-46df-4ac2-a370-3e7e9f63f0ce",
+		"name": "Rampart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://isis2503-dasoano1.auth0.com/oauth/token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "093c9400-bb16-41f0-8401-becfe6979693",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"grant_type\":\"http://auth0.com/oauth/grant-type/password-realm\",\n\"username\": \"admin@yopmail.com\",\n\"password\": \"Hola1234\",\n\"audience\": \"uniandes.edu.co/entrega2\", \n\"scope\": \"openid\",\n\"client_id\": \"r0ffU9cccUvkV98WC5OB-HtVjbsbNz_F\", \n\"client_secret\": \"2KtXqq-MG4j2nAUuIIgduCqKN7ktOmWPd48VQSNb3gCA995-H3eUtYB1KLQwiU4u\", \n\"realm\": \"Username-Password-Authentication\"\n}"
+				},
+				"url": {
+					"raw": "https://isis2503-dasoano1.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"isis2503-dasoano1",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

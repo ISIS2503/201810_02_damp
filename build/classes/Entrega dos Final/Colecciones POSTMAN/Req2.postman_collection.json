@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "c74f7ff6-47cf-41b4-9174-c895dea963e3",
+		"name": "Req2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"02\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"02\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"02\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"02\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A2\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"04\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A2\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"04\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A3\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"03\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A3\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"19\",\n\t\"Apartamento\" : \"03\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A2\", \n\t\"Conjunto\" : \"Torres Gonzalo Jimenes de Quesada\",\n\t\"Torre\" : \"5\", \n\t\"Piso\" : \"18\",\n\t\"Apartamento\" : \"03\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\", \n\t\"Conjunto\" : \"Puertas del sol\",\n\t\"Torre\" : \"0\", \n\t\"Piso\" : \"0\",\n\t\"Apartamento\" : \"20\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\", \n\t\"Conjunto\" : \"Puertas del sol\",\n\t\"Torre\" : \"0\", \n\t\"Piso\" : \"0\",\n\t\"Apartamento\" : \"21\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\", \n\t\"Conjunto\" : \"A\",\n\t\"Torre\" : \"0\", \n\t\"Piso\" : \"0\",\n\t\"Apartamento\" : \"1\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\" ,\n\t\"Conjunto\": \"Torres gonzalo jimenes de quesada\" ,\n\t\"Torre\" : \"1\" ,\n\t\"Piso\" : \"16\" ,\n\t\"Apartamento\" : \"04\" \n}\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\" ,\n\t\"Conjunto\": \"Torres gonzalo jimenes de quesada\" ,\n\t\"Torre\" : \"1\" ,\n\t\"Piso\" : \"16\" ,\n\t\"Apartamento\" : \"04\" \n}\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Activo\" : \"Activo\",\n\t\"Tipo\" : \"A1\" ,\n\t\"Conjunto\": \"Torres gonzalo jimenes de quesada\" ,\n\t\"Torre\" : \"1\" ,\n\t\"Piso\" : \"13\" ,\n\t\"Apartamento\" : \"04\" \n}\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/alertas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:5000/alertas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"alertas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

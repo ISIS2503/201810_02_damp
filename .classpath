@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Images"/>
+	<classpathentry kind="src" path="data/Images"/>
+	<classpathentry excluding="Images/" kind="src" path="data"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 10.x Runtime">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.web"/>

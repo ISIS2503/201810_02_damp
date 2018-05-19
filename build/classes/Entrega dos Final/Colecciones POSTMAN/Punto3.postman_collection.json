@@ -1,0 +1,363 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Punto3",
+		"_postman_id": "206218a3-7348-b82a-8d63-4d63e415bf57",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inmuebles",
+			"description": "",
+			"item": [
+				{
+					"name": "borrar",
+					"request": {
+						"url": "http://127.0.0.1:5000/inmuebles/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "agregar",
+					"request": {
+						"url": "http://127.0.0.1:5000/inmuebles",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idP\" : \"1\",\n\t\"Informacion\" :  \"hi\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"url": "http://127.0.0.1:5000/inmuebles/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Informacion\" :  \"hello\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "obtener",
+					"request": {
+						"url": "http://127.0.0.1:5000/inmuebles",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getParticular",
+					"request": {
+						"url": "http://127.0.0.1:5000/inmuebles/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UnidadResidencial",
+			"description": "",
+			"item": [
+				{
+					"name": "borrar",
+					"request": {
+						"url": "http://127.0.0.1:5000/unidadesResidenciales/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "agregar",
+					"request": {
+						"url": "http://127.0.0.1:5000/unidadesResidenciales",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idP\" : \"1\",\n\t\"Informacion\" :  \"hi\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"url": "http://127.0.0.1:5000/unidadesResidenciales/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Informacion\" :  \"hello\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "obtener",
+					"request": {
+						"url": "http://127.0.0.1:5000/unidadesResidenciales",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getParticular",
+					"request": {
+						"url": "http://127.0.0.1:5000/unidadesResidenciales/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hubs",
+			"description": "",
+			"item": [
+				{
+					"name": "borrar",
+					"request": {
+						"url": "http://127.0.0.1:5000/hubs/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "agregar",
+					"request": {
+						"url": "http://127.0.0.1:5000/hubs",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idP\" : \"1\",\n\t\"Informacion\" :  \"hi\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"url": "http://127.0.0.1:5000/hubs/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Informacion\" :  \"hello\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "obtener",
+					"request": {
+						"url": "http://127.0.0.1:5000/hubs",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getParticular",
+					"request": {
+						"url": "http://127.0.0.1:5000/hubs/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cerraduras",
+			"description": "",
+			"item": [
+				{
+					"name": "borrar",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "agregar",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idP\" : \"1\",\n\t\"Informacion\" :  \"hi\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Informacion\" :  \"hello\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "obtener",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getParticular",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

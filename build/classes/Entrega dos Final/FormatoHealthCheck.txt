@@ -1,0 +1,39 @@
+Topico donde se deben publicar las claves
+	
+	"Cerradura.Tejares.1.1.1.config"
+	
+	Ejemplo:
+	Cerradura.Tejares.1.1.1.config
+
+	{
+		
+	}
+	
+
+Topico donde se debe publicar el health-check
+	
+	"Cerradura.Tejares.1.1.1.health-check"
+
+	formato json
+	{
+		"Valor":"Health-Check;;Cerradura.Tejares.1.1.1.health-check"
+	}
+	
+Topico donde se debe publicar las alertas
+	
+	"Cerradura.Tejares.1.1.1.alertas"
+
+	formato json
+	{
+		"Activo":"",
+		"Tipo":"",
+		"Conjunto":"",
+		"Torre":"",
+		"Piso":"",
+		"Apartamento":""	
+	}
+
+Publicar un health-check cada 10 segundos.
+
+
+

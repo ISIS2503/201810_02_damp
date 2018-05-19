@@ -1,0 +1,1132 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Propetarios",
+		"_postman_id": "8e72f663-e5e4-50fb-3017-565a510ea4e8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Propetario",
+			"description": "",
+			"item": [
+				{
+					"name": "POSTPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETALLPropetarios",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUTPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"informacion\" :  \"Hello\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPropetarioCambiado",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPropetarioBorrado",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horarios",
+			"description": "",
+			"item": [
+				{
+					"name": "POSTHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"idH\":\"1\",\r\n\t\"dia\":\"Martes\",\r\n\t\"hora1\":\"8:00AM\",\r\n\t\"hora2\":\"9:00AM\",\r\n\t\"timeZone\":\"Bogota\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETALLHorarios",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUTHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"dia\":\"Jueves\",\r\n\t\"hora1\":\"10:00AM\",\r\n\t\"hora2\":\"11:00AM\",\r\n\t\"timeZone\":\"Bogota\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETHorarioCambiado",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETHorarioBorrado",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cerradura",
+			"description": "",
+			"item": [
+				{
+					"name": "POSTCerradura",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"idC\": \"1\",\r\n\t\t\"EstadoActual\":\"Cerrada\",\r\n\t\t\"HealthCheck\":\"OK\",\r\n\t\t\"Horarios\":[ \r\n\t\t],\r\n\t\t\"Propetarios\":[\r\n\t\t]\r\n}\r\n\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETALLCerradura",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerradura",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUTCerradura",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"EstadoActual\":\"Abierta\",\r\n\t\t\"HealthCheck\":\"OK\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraCambiado",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCerradura",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraBorrado",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CerraduraHorarios",
+			"description": "",
+			"item": [
+				{
+					"name": "POSTCerradura",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"idC\": \"1\",\r\n\t\t\"EstadoActual\":\"Cerrada\",\r\n\t\t\"HealthCheck\":\"OK\",\r\n\t\t\"Horarios\":[ \r\n\r\n\t\t],\r\n\t\t\"Propetarios\":[\r\n\t\r\n\t\t]\r\n}\r\n\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POSTHorario1",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"idH\":\"1\",\r\n\t\"dia\":\"Martes\",\r\n\t\"hora1\":\"8:00AM\",\r\n\t\"hora2\":\"9:00AM\",\r\n\t\"timeZone\":\"Bogota\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POSTHorario2",
+					"request": {
+						"url": "http://127.0.0.1:5000/horarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"idH\":\"2\",\r\n\t\"dia\":\"Jueves\",\r\n\t\"hora1\":\"8:00AM\",\r\n\t\"hora2\":\"9:00AM\",\r\n\t\"timeZone\":\"Bogota\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POSTCerraduraHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/horarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"id\":\"1\"\r\n}\r\n\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETALLCerraduraHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/horarios",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/horarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUTCerraduraHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/horarios/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"id\":\"2\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraHorarioCambiado",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/horarios/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCerraduraHorario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/horarios/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraHorarioBorrado",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/horarios/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CerraduraPropetario",
+			"description": "",
+			"item": [
+				{
+					"name": "POSTPropetario1",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hit\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POSTPropetario2",
+					"request": {
+						"url": "http://127.0.0.1:5000/propetarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"2\",\r\n\t\"informacion\" :  \"hello\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POSTCerraduraPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/propetarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"id\":\"1\"\r\n}\r\n\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETALLCerraduraPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/propetarios",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/propetarios/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUTCerraduraPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/propetarios/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"id\":\"2\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraPropetarioCambiado",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/propetarios/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCerraduraPropetario",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/propetarios/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETCerraduraPropetarioBorrado",
+					"request": {
+						"url": "http://127.0.0.1:5000/cerraduras/1/propetarios/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permisos",
+			"description": "",
+			"item": [
+				{
+					"name": "POSTPermisos",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idV\":\"1\",\r\n\t\"Dirrecion\":\"Calle 186#25-45\",\r\n\t\"Cerraduras\":[\r\n\r\n\t]\r\n}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETALLPermisos",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPermisos",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUTPermisos",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Dirrecion\":\"Calle 157#10-5\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPermisosCambiado",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePermisos",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPermisosBorrado",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PermisosCerraduras",
+			"description": "",
+			"item": [
+				{
+					"name": "POSTPermisos",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idV\":\"1\",\r\n\t\"Dirrecion\":\"Calle 186#25-45\",\r\n\t\"Cerraduras\":[\r\n\r\n\t]\r\n}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POSTPermisosCerraduras",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1/cerraduras",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":\"1\"\r\n}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETALLPermisosCerraduras",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1/cerraduras",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPermisosCerraduras",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1/cerraduras/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PUTPermisosCerraduras",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1/cerraduras/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":\"2\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPermisosCerradurasCambiado",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1/cerraduras/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePermisosCerraduras",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1/cerraduras/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GETPermisosCerradurasBorrado",
+					"request": {
+						"url": "http://127.0.0.1:5000/permisos/1/cerraduras/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"idP\": \"1\",\r\n\t\"informacion\" :  \"hi\",\r\n\t\"horarios\":[\r\n\t\t{\r\n\t\t\t\"idH\": \"1\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Martes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Miercoles\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"idH\": \"2\",\r\n\t\t\t\"dias\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia1\": \"Lunes\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia2\": \"Jueves\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"dia3\": \"Sabado\"\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\"timeZone\": \"Bogota\"\r\n\t\t}\r\n\t]\r\n\t\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

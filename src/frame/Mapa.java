@@ -7,13 +7,18 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
+
+import sun.applet.Main;
 
 /**
  * @author Miguel Puentes
@@ -41,8 +46,7 @@ public class Mapa extends JPanel implements ActionListener
 		setBorder(new TitledBorder("Mapa Residencial"));
 		setLayout( new GridLayout( 10, 10) );
 		botonesCasillas = new JButton[10][10];
-		ImageIcon house = new ImageIcon("./data/Images/house.png");
-		
+		ImageIcon pIcon = new ImageIcon("./data/Images/house.png");
 		for( int i = 0; i < 10; i++ )
 		{
 			for( int j = 0; j < 10; j++ )
@@ -50,7 +54,7 @@ public class Mapa extends JPanel implements ActionListener
 				botonesCasillas[ i ][ j ] = new JButton( );
 				botonesCasillas[ i ][ j ].addActionListener( this );
 				botonesCasillas[ i ][ j ].setBackground(Color.WHITE);
-				botonesCasillas[ i ][ j ].setIcon(house);
+				botonesCasillas[ i ][ j ].setIcon(pIcon);
 				botonesCasillas[ i ][ j ].setActionCommand( i + ";" + j );
 				add( botonesCasillas[ i ][ j ] );
 			}

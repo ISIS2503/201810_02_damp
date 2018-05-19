@@ -1,0 +1,197 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Usuarios",
+		"_postman_id": "6bda0a4d-3e30-b6c2-b8da-128ad7401b8c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET administrador",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios/rol/administrador",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Rol\": \"seguridad\",\n    \"Nombre\": \"Aurelio Cheveroni\",\n    \"Password\": \"Hola1234\",\n    \"Correo\": \"aurelio@seguridad.com\"\n    \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET seguridad",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios/rol/seguridad",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Rol\": \"seguridad\",\n    \"Nombre\": \"Aurelio Cheveroni\",\n    \"Password\": \"Hola1234\",\n    \"Correo\": \"aurelio@seguridad.com\"\n    \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET yale",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios/rol/yale",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Rol\": \"seguridad\",\n    \"Nombre\": \"Aurelio Cheveroni\",\n    \"Password\": \"Hola1234\",\n    \"Correo\": \"aurelio@seguridad.com\"\n    \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET propietarios",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios/rol/propietario",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Rol\": \"seguridad\",\n    \"Nombre\": \"Aurelio Cheveroni\",\n    \"Password\": \"Hola1234\",\n    \"Correo\": \"aurelio@seguridad.com\"\n    \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET usuarios",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET usuario",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios/jose@conjunto.com",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST usuarios",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Rol\":\"yale\",\n\t\"Nombre\":\"Carlota\",\n\t\"Password\":\"Hola1234\",\n\t\"Correo\":\"carlotas@yale.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT usuarios",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios/carlitos@conjunto.com",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Rol\":\"administrador\",\n\t\"Nombre\":\"Carlos\",\n\t\"Password\":\"Hola1234\",\n\t\"Correo\":\"carlitos@conjunto.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE usuarios",
+			"request": {
+				"url": "http://127.0.0.1:5000/usuarios/carlitos@conjunto.com",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Rol\":\"administrador\",\n\t\"Nombre\":\"Carlos\",\n\t\"Password\":\"Hola1234\",\n\t\"Correo\":\"carlitos@conjunto.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
